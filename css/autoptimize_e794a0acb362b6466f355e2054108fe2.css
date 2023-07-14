@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 
+
 .has-normal-font-size {
 	font-size: var(--wp--preset--font-size--normal)
 }
@@ -6403,6 +6404,16 @@ a img.aligncenter {
 html {
 	font-size: 62.5%;
 	min-height: 100%
+}
+#main{
+	margin-top: 15rem;
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
 }
 
 * {
