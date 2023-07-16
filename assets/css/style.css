@@ -1,19 +1,9 @@
-/**
-* Template Name: Regna
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   background: #fff;
   color: #666666;
   font-family: "Open Sans", sans-serif;  
-  
+
   }
 
 a {
@@ -70,7 +60,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #49d6a9;
+  background: #0cf;
   color: #fff;
 }
 
@@ -126,6 +116,7 @@ h6 {
   background: rgba(52, 59, 64, 0.9);
   height: 70px;
   transition: all 0.5s;
+  
 }
 
 .scrolled-offset {
@@ -392,12 +383,13 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
+#particles-js {
   width: 100%;
   height: 100vh;
-  background: url(../img/11.png) top center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.3)),url(../img/hero.jpg) top center;
   background-size: cover;
   position: relative;
+
 }
 
 @media (min-width: 1024px) {
@@ -406,9 +398,8 @@ h6 {
   }
 }
 
-#hero:before {
+#particles-js:before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -416,7 +407,7 @@ h6 {
   right: 0;
 }
 
-#hero .hero-container {
+#particles-js .hero-container {
   position: absolute;
   bottom: 0;
   top: 0;
@@ -429,7 +420,7 @@ h6 {
   text-align: center;
 }
 
-#hero h1 {
+#particles-js h1 {
   margin: 30px 0 10px 0;
   font-size: 48px;
   font-weight: 700;
@@ -445,38 +436,95 @@ h6 {
   }
 }
 
-#hero h2 {
+#particles-js h2 {
   color: #eee;
   margin-bottom: 50px;
   font-size: 24px;
 }
 
 @media (max-width: 768px) {
-  #hero h2 {
+  #particles-js h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
 }
 
-#hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
+
+
+#particles-js .btn-get-started {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 28px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid #fff;
+  letter-spacing: 1.3px;
+  font-weight: 700;
   color: #fff;
+
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(63, 140, 202, 1);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+#particles-js .btn-get-started::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #3F8CCAFF;
+  box-shadow: 0 0 60px rgba(63, 140, 202, 1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
 }
 
-#hero .btn-get-started:hover {
-  background: #3F8CCAFF;
-  border: 2px solid #3F8CCAFF;
+#particles-js .btn-get-started:hover, .button:focus {
+  color: #3F8CCAFF;
+  transform: translateY(-6px);
+}
+
+#particles-js .btn-get-started:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+#particles-js .btn-get-started::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #3F8CCAFF;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+#particles-js .btn-get-started:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1038,33 +1086,60 @@ section {
   padding-top: 5px;
 }
 
-#contact .social-links {
-  padding: 20px 0;
-}
 
-#contact .social-links a {
-  font-size: 18px;
-  background: #333;
-  color: #fff;
-  line-height: 1;
+
+
+
+
+
+
+.circle-button{
+  font-family: 'Roboto', sans-serif;
+  color: #ccc;
+  display: inline-block;
+  font-size: 2rem;
   border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-#contact .social-links a i {
-  line-height: 0;
+.circle-button:hover{
+  animation: circle-anim 0.3s ease forwards;
+  transition: all 0.3s ease;
 }
 
-#contact .social-links a:hover {
-  background: #3F8CCAFF;
+.grow-container{
+  display: inline-block;
+  margin: 1em;
+}
+
+
+
+
+.facebook:hover{
+  background-color: #3B5998;
   color: #fff;
 }
+
+.linkedin:hover{
+  background-color: #0077B5;
+  color: #fff;
+}
+@keyframes circle-anim{
+  0% {
+    
+  }
+  
+  90%{
+    padding: 0.35em;
+    margin: -0.35em; 
+  }
+  
+  100%{
+    padding: 0.25em;
+    margin: -0.25em; 
+  }
+}
+
 
 #contact .php-email-form .error-message {
   display: none;
@@ -1125,11 +1200,61 @@ section {
   padding: 10px 24px;
   color: #fff;
   transition: 0.4s;
+  border-radius: 20px;
+transition: fade all .5s
 }
 
 #contact .php-email-form button[type=submit]:hover {
-  background: #143f85;
+
+  filter: brightness(0.8);
+  cursor: pointer;
+
 }
+
+
+#contact .php-email-form button[type=submit] {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+#contact .php-email-form button[type=submit]:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  border-radius: 10rem;
+  z-index: -2;
+}
+#contact .php-email-form button[type=submit]:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #008fb3;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+#contact .php-email-form button[type=submit]:hover {
+  color: #fff;
+}
+#contact .php-email-form button[type=submit]:hover:before {
+  width: 100%;
+}
+
 
 @keyframes animate-loading {
   0% {
