@@ -1512,7 +1512,9 @@ body {
 	line-height: 1.5;
 	color: #212529;
 	text-align: left;
-	background-color: #fff
+	background-color: #fff;
+	display:flex;
+
 }
 
 [tabindex="-1"]:focus {
@@ -1823,6 +1825,7 @@ template {
 	--animate-delay: 1s;
 	--animate-repeat: 1
 }
+
 
 .animated {
 	-webkit-animation-duration: 1s;
@@ -6708,8 +6711,7 @@ button:focus {
 	width: var(--container-width);
 	margin: 0 auto;
 	padding: 0 var(--container-padding)
-	
-	display: flex-left;
+
 }
 
 html #wpadminbar {
@@ -8920,7 +8922,7 @@ body :is(.careers-widgets, .job-listing-form) .gform_wrapper.gravity-theme .subm
 	}
 
 	.content-carousel-item-content {
-		order: 1
+		order: 1;
 	}
 }
 
