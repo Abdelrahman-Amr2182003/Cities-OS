@@ -6708,6 +6708,8 @@ button:focus {
 	width: var(--container-width);
 	margin: 0 auto;
 	padding: 0 var(--container-padding)
+	
+	display: flex-left;
 }
 
 html #wpadminbar {
